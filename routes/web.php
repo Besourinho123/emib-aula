@@ -15,6 +15,10 @@ Route::get('/', 'AlunosController@index');
 Route::get('/cadastro', 'AlunosController@create');
 Route::post('/salva', 'AlunosController@save');
 
+Route::get('/prof', 'TeacherController@index');
+Route::get('/cad', 'TeacherController@create');
+Route::post('/save', 'TeacherController@save');
+
 
 
 
