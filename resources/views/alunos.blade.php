@@ -9,10 +9,26 @@
 <body>
     <h1>Blade mata vampire!</h1>
 
-    <ul>
-        @foreach($dados as $value)
-            <li>{{ $value->nome }}</li>
-        @endforeach
-    </ul>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Idade</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach($dados as $value)
+                <tr>
+                    <td>{{ $value->id }}</td>
+                    <td>{{ $value->nome }}</td>
+                    <td>{{ $value->idade }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    
+    </table>
+
 </body>
 </html>

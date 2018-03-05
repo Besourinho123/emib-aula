@@ -11,5 +11,7 @@ class AlunosController extends Controller
     {
         $dados = Aluno::all();
         return view('alunos', compact('dados'));
+        //return view('alunos', ['dados' => $dados]);
+        
     }
 }
