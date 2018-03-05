@@ -14,7 +14,7 @@
     <div class="container">
         <div class="row">
             <div class="col-8">
-            <h1 class="display-3">Página de cadastro</h1>
+            <h1 class="display-3">Cadastre seu Professor</h1>
 
     <form action="/save" method="post">
         {{ csrf_field() }}

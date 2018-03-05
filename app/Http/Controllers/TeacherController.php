@@ -16,10 +16,10 @@ class TeacherController extends Controller
         return view('cad');
     }
 
-    public function save(){
+    public function save(Request $request){
          //$_POST['nome']
         //cria um novo acesso a model do laravel
-        $aluno = new Teacher();
+        $teacher = new Teacher();
 
         //coloca na model os dados vindos do formulario
         $teacher->nome = $request->nome;
