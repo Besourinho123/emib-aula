@@ -36,17 +36,14 @@ class TeacherController extends Controller
     }
 
     public function edit(Teacher $dados){
-        //$dados = Aluno::find($id);
+        //$dados = Teacher::find($id);
         return view('editar', compact('dados'));
         
     }
 
     public function update(Request $request){
-        //$dados = Aluno::find($id);
-        return view('editar', compact('dados'));
 
-         
-        //cria um novo acesso a model do laravel
+         //cria um novo acesso a model do laravel
         $teacher = Teacher::find($request -> id);
 
         //coloca na model os dados vindos do formulario
@@ -63,9 +60,9 @@ class TeacherController extends Controller
         
     }
 
-    public function delete(Teacher $aluno)
+    public function delete(Teacher $teacher)
     {
-        $teacher->delete();
+        $teacher -> delete();
         return redirect('/prof');
         
         //return 'ok';
