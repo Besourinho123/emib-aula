@@ -34,4 +34,43 @@ class TeacherController extends Controller
         return redirect('/prof');
         
     }
+
+    public function edit(Teacher $dados){
+        //$dados = Aluno::find($id);
+        return view('editar', compact('dados'));
+        
+    }
+
+    public function update(Request $request){
+        //$dados = Aluno::find($id);
+        return view('editar', compact('dados'));
+
+         
+        //cria um novo acesso a model do laravel
+        $teacher = Teacher::find($request -> id);
+
+        //coloca na model os dados vindos do formulario
+        $teacher->nome = $request->nome;
+        $teacher->area = $request->area;
+       
+        
+        
+        //grava no banco (persistir os dados)
+        $teacher->save();
+
+        //substitui o Location
+        return redirect('/prof');
+        
+    }
+
+    public function delete(Teacher $aluno)
+    {
+        $teacher->delete();
+        return redirect('/prof');
+        
+        //return 'ok';
+    }
+    
+
+
 }

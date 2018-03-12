@@ -19,6 +19,10 @@ Route::get('/prof', 'TeacherController@index');
 Route::get('/cad', 'TeacherController@create');
 Route::post('/save', 'TeacherController@save');
 
+Route::post('/editar/{dados}', 'TeacherController@edit');
+Route::post('/update', 'TeacherController@update');
+Route::post('/delete/{dados}', 'TeacherController@delete');
+
 
 
 

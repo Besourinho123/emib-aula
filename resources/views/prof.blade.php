@@ -35,6 +35,13 @@
                 <td>{{ $value->nome }}</td>
                 <td>{{ $value->area }}</td>
             </tr>
+            <td>
+             <a class="btn btn-primary" href="/editar/{{ $value->id }}">Mudar</a>    
+                    <form method="post" style="display: inline;" action="/delete/{{ $value->id }}">
+                       {{csrf_field()}}
+                        <button class="btn btn-danger">Deletar</button>
+                    </form>
+            </td>
         @endforeach
     </tbody>
 
